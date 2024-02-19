@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_Ans2</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<style>
+    .btn {
+        background-color: rgb(123, 123, 241);
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        /* transform: translate(-50% , 0%); */
+        transform: translateX(-50%);
+        left: 50%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    button {
+        background-color: rgb(123, 123, 241);
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 15px 20px;
+        margin: 0px 10px;
+    }
+    .image {
+        background-color: gray;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 25px;
+        color: white;
+    }
+    img {
+        width: 350px;
+    }
+</style>
+<body>
+    <div id="imageGallery">
+        <div class="btn">
+            <button onclick="showImage('all')">All</button>
+            <button onclick="showImage('html')">html</button>
+            <button onclick="showImage('css')">css</button>
+            <button onclick="showImage('javascript')">javascript</button>
+            <button onclick="showImage('jQuery')">jQuery</button>
+            <button onclick="showImage('bootstrab')">bootstrab</button>
+        </div>
+        <br><br><br><br>
+        <div class="image html">
+            <img src="images/html.png" alt="">
+            <p>
+                HTML stands for Hypertext Markup Language. 
+                It is the standard markup language used to 
+                create and design documents on the World Wide Web. 
+                HTML describes the structure of a web page using a 
+                markup system of elements or tags, each denoted by
+            </p>
+        </div>
+        <div class="image css">
+            <img src="images/css.png" alt="">
+            <p>
+                CSS, or Cascading Style Sheets, is a style sheet 
+                language used for describing the presentation 
+                and formatting of a document written in a markup 
+                language, such as HTML or XML. The primary purpose o
+                f CSS is to separate the structure and content of a d
+                ocument from its visual presentation. By using CSS, web 
+                designers and developers can control the layout, appear
+                ance, and style of multiple web pages consistently.
+            </p>
+        </div>
+        <div class="image javascript">
+            <img src="images/javascript.png" alt="">
+            <p>
+                HTML stands for Hypertext Markup Language. 
+                It is the standard markup language used to 
+                create and design documents on the World Wide Web. 
+                HTML describes the structure of a web page using a 
+                markup system of elements or tags, each denoted by
+            </p>
+        </div>
+        <div class="image jQuery">
+            <img src="images/jQuery1.png" alt="">
+            <p>
+                HTML stands for Hypertext Markup Language. 
+                It is the standard markup language used to 
+                create and design documents on the World Wide Web. 
+                HTML describes the structure of a web page using a 
+                markup system of elements or tags, each denoted by
+            </p>
+        </div>
+        <div class="image bootstrab">
+            <img src="images/bootstrab.png" alt="">
+            <p>
+                HTML stands for Hypertext Markup Language. 
+                It is the standard markup language used to 
+                create and design documents on the World Wide Web. 
+                HTML describes the structure of a web page using a 
+                markup system of elements or tags, each denoted by
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function showImage(img) {
+        $('.image').hide();
+        if(img == 'all') {
+            $('.image').show();
+        } else {
+            $('.' + img).show();
+        }
+    }
+</script>
